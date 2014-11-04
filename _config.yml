@@ -1,0 +1,7 @@
+destination: ./_site
+layouts: ./_layout
+encoding: utf-8
+baseurl: /
+permalink: /:title
+markdown: redcarpet
+paginate: 15

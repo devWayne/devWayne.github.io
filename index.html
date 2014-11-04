@@ -1,8 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-helloword!
-</body>
-</html>
+---
+layout: default
+title: Vi HomePage
+---
+<h3>动态</h3>
+<ul>
+    {% for post in site.posts %}
+    <li>{{ post.date | date_to_string }}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{{ paginator.previous_page }}
