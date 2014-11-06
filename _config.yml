@@ -1,5 +1,5 @@
 destination: ./_site
-layouts: ./_layout
+layouts: ./_layouts
 encoding: utf-8
 baseurl: /
 permalink: /:title
