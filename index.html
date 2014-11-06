@@ -5,7 +5,7 @@ title: Vi HomePage
 <h3>动态</h3>
 <ul>
     {% for post in site.posts %}
-    <li>{{ post.date | date_to_string }}
+    <li>
         <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
     {% endfor %}
