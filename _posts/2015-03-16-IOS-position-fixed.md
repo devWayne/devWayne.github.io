@@ -5,11 +5,11 @@ title: iOS position fixed 在输入框获得焦点时定位失效
 # iOS position fixed 在输入框获得焦点时定位失效
 
 
-##问题
+##问题现象
 在ios（实测IOS8仍然存在该问题）中，如果某一DOM节点的postion定位为fixed，并且该节点中的某个子节点会唤起虚拟键盘的时候，Position:fixed的定位会被打破，造成下图中得效果：
 
-![ip4-1](({{ site.url }}/assets/IOS-position-fixed/ip4-1.png)
-![ip4-2](({{ site.url }}/assets/IOS-position-fixed/ip4-2.png)
+![ios8-1]({{ site.url }}/assets/IOS-position-fixed/ios8-1.png)
+![ios8-2]({{ site.url }}/assets/IOS-position-fixed/ios8-2.png)
 
 
 这一类的场景在社交功能类得App中可以说非常的常见，
@@ -66,3 +66,31 @@ title: iOS position fixed 在输入框获得焦点时定位失效
     position: absolute; 
 } 
 ```
+
+##
+在实际的测试过程中，发现了一个更隐蔽的BUG，在IPHONE4环境下，点击Input获得输入框焦点的时候，会引发‘穿透’现象，即触发了positon:fixed元素下面一层的元素事件，如图所示：
+
+
+![ip4-1]({{ site.url }}/assets/IOS-position-fixed/ip4-1.png)
+
+在这里会触发点击评论的事件，尝试使用`event.stopPropagation()`去阻止事件冒泡并没有效果，根据之前对header & footer 定位的方案，所以考虑通过改变Body的定位，使整个页面定位为absolute。
+
+代码如下：
+
+```
+    $(document)
+    .on('focus', 'input', function(e) {
+        $('.header').addClass('fixfixed');
+ 	$('.footer').addClass('fixfixed');
+	//add body postion
+	$('.body').addClass('fixfixed');
+
+    })
+    .on('blur', 'input', function(e) {
+        $('.header').removeClass('fixfixed');
+	$('.footer').removeClass('fixfixed');
+	//add body postion
+	$('.body').removeClass('fixfixed');
+    });
+```
+
