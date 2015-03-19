@@ -25,11 +25,11 @@ title: iOS position fixed 在输入框获得焦点时定位失效
 	<!-- head stuffs -->
     </head>
     <body>
-        <div class="header">A positon :fixed Header<input /></div>
+        <div class="header">A positon :fixed Header<input></div>
         <div class="container">
 	<!-- main part -->
         </div>
-        <div class="footer">A positon :fixed Footer<input /></div>
+        <div class="footer">A positon :fixed Footer<input></div>
     </body>
 </html>
 ```
