@@ -67,7 +67,7 @@ title: iOS position fixed 在输入框获得焦点时定位失效
 } 
 ```
 
-##
+##Bonus
 在实际的测试过程中，发现了一个更隐蔽的BUG，在IPHONE4环境下，点击Input获得输入框焦点的时候，会引发‘穿透’现象，即触发了positon:fixed元素下面一层的元素事件，如图所示：
 
 
