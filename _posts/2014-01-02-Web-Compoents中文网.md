@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Web-Components中文网
+comments: true
 ---
 #  Web-Components中文网
 
