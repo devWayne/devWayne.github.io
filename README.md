@@ -1,4 +1,4 @@
-# My persional site
+# My personal site
 
 [link](devWayne.github.io/)
 
