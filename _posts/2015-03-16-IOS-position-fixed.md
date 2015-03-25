@@ -2,7 +2,7 @@
 layout: default
 title: iOS position fixed 在输入框获得焦点时定位失效
 comments: true
-tags:notes
+tags: notes
 ---
 # iOS position fixed 在输入框获得焦点时定位失效
 
