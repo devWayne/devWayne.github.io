@@ -4,7 +4,7 @@ title: Vi HomePage
 ---
 <h3>个人作品</h3>
 <ul>
-{% for post in posts %}
+{% for post in site.posts %}
   {% if post.tags contains works %}
   <li>
         <a href="{{ post.url }}">{{ post.title }}</a>
