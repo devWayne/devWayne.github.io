@@ -2,6 +2,7 @@
 layout: default
 title: box flexbox flex 区别和实际使用经验
 comments: true
+tags: notes
 ---
 
 ##规范种类

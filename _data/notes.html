@@ -2,10 +2,10 @@
 layout: default
 title: Vi HomePage
 ---
-<h3>个人作品</h3>
+<h3>个人笔记</h3>
 <ul>
         {% for tag in site.tags %}
-		{% if tag[0] == "works" %}
+		{% if tag[0] == "notes" %}
         	{% for post in tag[1] %}
                     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
                 {% endfor %}
@@ -13,3 +13,4 @@ title: Vi HomePage
         {% endfor %}
 </ul>
 {{ paginator.previous_page }}
+
