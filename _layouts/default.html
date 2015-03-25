@@ -20,6 +20,9 @@
             <h1>Vi</h1>
             <p>个人主页</p>
             <p class="view"><a href="http://github.com/devWayne">进入我的GitHub <small>devWayne</small></a>
+	     {% for nav in site.data.nav %}
+             <a href='/{{ nav.href }}'>{{ nav.title }}</a>
+             {% endfor%}
             </p>
         </header>
         <section>
