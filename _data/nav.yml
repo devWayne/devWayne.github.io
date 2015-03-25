@@ -1,20 +1,20 @@
 - href: 
   title: home
-  subtitle:我的主页
+  subtitle: 我的主页
 
 - href: notes.html
   title: notes
-  subtitle:我的笔记
+  subtitle: 我的笔记
 
 - href: works.html
   title: works
-  subtitle:我的作品
+  subtitle: 我的作品
 
 - href: aboutme.html
   title: aboutme
-  subtitle:我的介绍
+  subtitle: 我的介绍
 
 - href: sites.html
   title: sites
-  subtitle:相关链接
+  subtitle: 相关链接
 
