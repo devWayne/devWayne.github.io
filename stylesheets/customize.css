@@ -17,7 +17,7 @@
  		padding: 1.857142857rem;
 	}
 	body{
-		padding：0px;
+		padding: 0px;
 	}
 
 }
@@ -30,8 +30,10 @@ a{
 footer {
   	clear: both;
   	width: 270px;
- 	float: left;
-  	bottom: 50px;
+	position: inherit;
+}
+header{
+	position: inherit;
 }
 body{
 	 background-color: #bcbcbc;
