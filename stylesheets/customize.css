@@ -1,10 +1,11 @@
 .section{
-	width:600px;
+	width:800px;
 }
 .center {
 	text-align:center;
 }
 .wrapper{
+	width: 1190px;
  	padding: 2.857142857rem;
  	overflow: hidden;
  	background-color: #fff;
