@@ -1,0 +1,12 @@
+.section{
+	width:600px;
+}
+.center {
+	text-align:center;
+}
+li{
+	list-style-type: none;
+}
+a{
+	display:block;
+}
