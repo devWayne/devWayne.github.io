@@ -2,7 +2,7 @@
 	text-align:center;
 }
 .wrapper{
-	width: 1190px;
+	width: 960px;
  	padding: 2.857142857rem;
  	overflow: hidden;
  	background-color: #fff;
@@ -37,6 +37,6 @@ body{
 	 background-color: #bcbcbc;
 }
 section{
-	width:800px;
+	width:650px;
 }
 
