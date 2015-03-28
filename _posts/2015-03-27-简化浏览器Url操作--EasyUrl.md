@@ -48,8 +48,7 @@ function arr2obj(arr){
     return _obj;
 }
 ```
-
-使用方式      
+使用方式   
 ```
 var myurl = new URL();
 //获取Object类型
