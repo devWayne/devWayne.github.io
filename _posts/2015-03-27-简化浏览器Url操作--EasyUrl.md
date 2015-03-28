@@ -49,6 +49,7 @@ function arr2obj(arr){
 }
 ```
 使用方式   
+
 ```
 var myurl = new URL();
 //获取Object类型
@@ -62,7 +63,8 @@ var paramsArray = myurl.readParams({type:'Array'});
 
 在前端控制路由的时候，常常会需要配置跳转链接,这里提供一个较为便捷的方法，可以快速将参数转成URL进行操作      
 
-使用方式     
+使用方式   
+
 ```
 var myurl = new URL();
 //新的URL参数
