@@ -39,4 +39,7 @@ body{
 section{
 	width:650px;
 }
-
+@media print, screen and (max-width: 960px)
+section {
+	width:100%;
+}

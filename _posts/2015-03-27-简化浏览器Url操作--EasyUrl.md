@@ -19,7 +19,20 @@ tags: works
 - location.origin(在chrome中支持)
 
 
-##Url参数
+##Url Hash操作 
+
+Hash值常用于网页的定位，在单页应用框架中亦可以当做实现路由功能的实现   
+Hash值是带在`#`后得一个字符串，所以在操作中相对的简单,API模仿jQuery中得attr()  
+
+```
+var myurl = new URL();
+//获取hash
+var newUrl = myurl.hash();
+//设置hash
+var newUrl = myurl.hash('newHash');
+```
+
+##Url 参数操作
 前端开发中经常会遇到对当前Url进行操作。
 可以将操作分为四大类，类似于数据库操作的'CRUD'   
 也就是新建(create),查找(read),更新(update),删除(delete)   
@@ -70,7 +83,32 @@ var myurl = new URL();
 //新的URL参数
 var _data = {};
 //如果参数重复，用新的参数替换
-var paramsObj = myurl.updateParams({data:_data});
+var newUrl = myurl.updateParams({data:_data});
 //如果参数重复，保留旧得参数
-var paramsArray = myurl.readParams({override:false,data:_data});
+var newUrl = myurl.readParams({override:false,data:_data});
 ```
+
+###创建(create)
+
+在创建一个Url之前首先会进行判断，若Url已经包含参数，则返回空对象，建议使用更新方法
+
+使用方式   
+
+```
+var myurl = new URL();
+var _data = {};
+var newUrl = myurl.createParams(_data);
+```
+
+###删除(delete)
+
+删除Url中得参数
+
+使用方式   
+
+```
+var myurl = new URL();
+var _data = {};
+var newUrl = myurl.deleteParams(_data);
+```
+
