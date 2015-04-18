@@ -9,7 +9,6 @@
  	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 }
 
-
 @media print, screen and (max-width: 480px) {
 	.wrapper{
  		padding: 1.857142857rem;
@@ -17,7 +16,9 @@
 	body{
 		padding: 0px;
 	}
-
+	.qrcode{
+		display:none;
+	}
 }
 li{
 	list-style-type: none;
