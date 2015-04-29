@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://kylar.cn" # the base hostname & protocol for your site
 
-
+disqus_shortname: 'devwayne'
 # Sidebar filter
 # Choose 'tag' or 'category' as filter in sidebar.
 filter: 'tag'
