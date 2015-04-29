@@ -1,10 +1,10 @@
 ---
-layout: default
+layout: post
 title: 简化浏览器Url操作--EasyUrl
 comments: true
-tags: works
+tags: 我的作品
 ---
-#简化浏览器Url操作--EasyUrl
+
 项目地址   
 [git repo](https://github.com/devWayne/EasyUrl.js)
 
@@ -24,13 +24,13 @@ tags: works
 Hash值常用于网页的定位，在单页应用框架中亦可以当做实现路由功能的实现   
 Hash值是带在`#`后得一个字符串，所以在操作中相对的简单,API模仿jQuery中得attr()  
 
-```
+{% highlight javascript %}
 var myurl = new URL();
 //获取hash
 var newUrl = myurl.hash();
 //设置hash
 var newUrl = myurl.hash('newHash');
-```
+{% endhighlight %}
 
 ##Url 参数操作
 前端开发中经常会遇到对当前Url进行操作。
@@ -43,7 +43,7 @@ var newUrl = myurl.hash('newHash');
 在使用的过程中将参数转换成对象可以更加方便进行操作   
 参数在对象和数组之间的互相转换   
    
-```
+{% highlight javascript %}
 function obj2arr(obj){
     var _arr=[];
     Object.keys(obj).forEach(function(v,idx){
@@ -51,8 +51,9 @@ function obj2arr(obj){
     })
     return _arr;
 }
-```
-```
+{% endhighlight %}
+
+{% highlight javascript %}
 function arr2obj(arr){
     var _obj={};
     arr.forEach(function(v,idx){
@@ -60,17 +61,17 @@ function arr2obj(arr){
     });
     return _obj;
 }
-```
+{% endhighlight %}
 使用方式   
 
-```
+{% highlight javascript %}
 var myurl = new URL();
 //获取Object类型
 var paramsObj = myurl.readParams();
 //获取Array类型
 var paramsArray = myurl.readParams({type:'Array'});
 
-```
+{% endhighlight %}
 
 ###更新(update)
 
@@ -78,7 +79,7 @@ var paramsArray = myurl.readParams({type:'Array'});
 
 使用方式   
 
-```
+{% highlight javascript %}
 var myurl = new URL();
 //新的URL参数
 var _data = {};
@@ -86,7 +87,7 @@ var _data = {};
 var newUrl = myurl.updateParams({data:_data});
 //如果参数重复，保留旧得参数
 var newUrl = myurl.readParams({override:false,data:_data});
-```
+{% endhighlight %}
 
 ###创建(create)
 
@@ -94,11 +95,11 @@ var newUrl = myurl.readParams({override:false,data:_data});
 
 使用方式   
 
-```
+{% highlight javascript %}
 var myurl = new URL();
 var _data = {};
 var newUrl = myurl.createParams(_data);
-```
+{% endhighlight %}
 
 ###删除(delete)
 
@@ -106,9 +107,10 @@ var newUrl = myurl.createParams(_data);
 
 使用方式   
 
-```
+{% highlight javascript %}
 var myurl = new URL();
 var _data = {};
 var newUrl = myurl.deleteParams(_data);
-```
+{% endhighlight %}
+
 

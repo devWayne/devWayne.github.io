@@ -1,65 +1,26 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html>
+  {% include head.html %}
+  <body>
+    {% include sidebar.html %}
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{ page.title }}</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="../stylesheets/styles.css">
-    <link rel="stylesheet" href="../stylesheets/customize.css">
-    <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-</head>
+    <main id="main">
+      {{ content }}
 
-<body>
-    <div class="wrapper">
-        <header>
-            <h1>Vi</h1>
-            <p>专注于HTML5，NodeJS和Android技术</p>
-            <p class="view"><a href="http://github.com/devWayne">进入我的GitHub <small>devWayne</small></a>
-	     {% for nav in site.data.nav %}
-             <a href='/{{ nav.href }}'>{{ nav.title }}<small>{{ nav.subtitle }}</small></a>
-             {% endfor%}
-            </p>
-	    <p class="qrcode">主页二维码<img src="/qr.png"></p>
-        </header>
-        <section>
+      <div class="footer">
+        <div class="container">
+          <p class="footer-entry">Copyright © 2015 kylar.cn Hosted on <a href="https://pages.github.com/" target="_blank">Github</a></p>
+        </div>
+      </div>
+    </main>
 
-            {{ content }}
-            <div class="comments">
-                {% if page.comments %}
-                <div id="disqus_thread"></div>
+    <button id="menu">
+      <span id="menu-icons"></span>
+    </button>
 
-                <script type="text/javascript">
-                    /* * * CONFIGURATION VARIABLES * * */
-                    var disqus_shortname = 'devwayne';
-
-                    /* * * DON'T EDIT BELOW THIS LINE * * */
-                    (function() {
-                        var dsq = document.createElement('script');
-                        dsq.type = 'text/javascript';
-                        dsq.async = true;
-                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                    })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
-                </noscript>
-                {% endif %}
-            </div>
-        </section>
-        <footer>
-            <p>
-                <small>Copyright © 2015 kylar.cn powered by Github Pages</small>
-            </p>
-        </footer>
-    </div>
-    <script src="../javascripts/scale.fix.js"></script>
-
-</body>
-
+    {% include scripts.html %}
+  </body>
 </html>

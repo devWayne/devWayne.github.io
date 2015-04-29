@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: post
 title: Web-Components中文网
 comments: true
-tags: works
+tags: 我的作品
 ---
-#  Web-Components中文网
 
 地址：[web-components.cn](http://web-components.cn)  
 [git repo](https://github.com/devWayne/web-components.cn)
