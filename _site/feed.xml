@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your awesome title</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Apr 2015 16:21:59 +0800</pubDate>
-    <lastBuildDate>Wed, 29 Apr 2015 16:21:59 +0800</lastBuildDate>
+    <title>Kylar</title>
+    <description></description>
+    <link>http://kylar.cn/</link>
+    <atom:link href="http://kylar.cn/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 29 Apr 2015 16:32:14 +0800</pubDate>
+    <lastBuildDate>Wed, 29 Apr 2015 16:32:14 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -57,7 +56,7 @@
 
 &lt;p&gt;Flipboard 希望渲染时间降至16ms以内&lt;code&gt;浏览器重绘网页的频率是60FPS（即16毫秒/帧），JavaScript做不到在16毫秒内完成DOM操作，因此产生了跳帧。&lt;/code&gt;在执行动画效果的时候将DOM操作减少到最低，虽然可以使用CSS transform and opacity，但是毕竟可选择的余地还是太少了。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/WebApp发展趋势的一些分析和看法/filpboard_btn.gif&quot; alt=&quot;效果&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/WebApp发展趋势的一些分析和看法/filpboard_btn.gif&quot; alt=&quot;效果&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;最后开发团队受到了HTML5游戏的启发，将整个页面搬到了Canvas上面，没有任何的DOM结构，一下子突破了DOM的性能瓶颈，Canvas操作的方式不仅仅是绕开了DOM，并且可以进行硬件（GPU）加速&lt;/p&gt;
 
@@ -74,13 +73,13 @@ React Native在产品上其实已经超出了WebApp得定义，但是追溯其�
 
 &lt;p&gt;不同于Ionic,PhoneGap等基于webview的Hybird方式,React Native通过将Virtual DOM过不同的渲染引擎生成不同平台下的UI，JS和Native之间通过Bridge通信。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/WebApp发展趋势的一些分析和看法/react-native1.jpg&quot; alt=&quot;react native 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/WebApp发展趋势的一些分析和看法/react-native1.jpg&quot; alt=&quot;react native 1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;React Native大大降低开发Native App的门槛与学习成本，也许会对传统的开发模式带来巨大得冲级。&lt;/p&gt;
 </description>
         <pubDate>Fri, 10 Apr 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/04/10/WebApp%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF%E7%9A%84%E4%B8%80%E4%BA%9B%E5%88%86%E6%9E%90%E5%92%8C%E7%9C%8B%E6%B3%95.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/04/10/WebApp%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF%E7%9A%84%E4%B8%80%E4%BA%9B%E5%88%86%E6%9E%90%E5%92%8C%E7%9C%8B%E6%B3%95.html</guid>
+        <link>http://kylar.cn/2015/04/10/WebApp%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF%E7%9A%84%E4%B8%80%E4%BA%9B%E5%88%86%E6%9E%90%E5%92%8C%E7%9C%8B%E6%B3%95.html</link>
+        <guid isPermaLink="true">http://kylar.cn/2015/04/10/WebApp%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF%E7%9A%84%E4%B8%80%E4%BA%9B%E5%88%86%E6%9E%90%E5%92%8C%E7%9C%8B%E6%B3%95.html</guid>
         
         <category>我的笔记</category>
         
@@ -143,13 +142,13 @@ A block formatting context is a part of a visual CSS rendering of a Web page. It
 
 &lt;p&gt;1.闭合浮动&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/BFC概念与实际应用场景/bfc-case-1.jpg&quot; alt=&quot;闭合浮动前&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/BFC概念与实际应用场景/bfc-case-1.jpg&quot; alt=&quot;闭合浮动前&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;左边的图片因为引入了浮动，造成wrapper的塌陷，在2行布局中是一个常见得问题，有许多的方法来清除浮动&lt;/p&gt;
 
 &lt;p&gt;解决的方案是让右边的元素触发BFC。如下图所示：   &lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/BFC概念与实际应用场景/bfc-case-2.jpg&quot; alt=&quot;闭合浮动后&quot; /&gt;   &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/BFC概念与实际应用场景/bfc-case-2.jpg&quot; alt=&quot;闭合浮动后&quot; /&gt;   &lt;/p&gt;
 
 &lt;p&gt;2.合并外边距&lt;/p&gt;
 
@@ -163,7 +162,7 @@ A block formatting context is a part of a visual CSS rendering of a Web page. It
 
 &lt;p&gt;在同一个BFC内时：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/BFC概念与实际应用场景/bfc-case-3.jpg&quot; alt=&quot;折叠外边距&quot; /&gt;   &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/BFC概念与实际应用场景/bfc-case-3.jpg&quot; alt=&quot;折叠外边距&quot; /&gt;   &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;line-blk&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 		&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;ns-line-b&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;margin: 10px 0;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;我的电影票&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
@@ -173,7 +172,7 @@ A block formatting context is a part of a visual CSS rendering of a Web page. It
 
 &lt;p&gt;划分为不同得BFC区域后：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/BFC概念与实际应用场景/bfc-case-4.jpg&quot; alt=&quot;折叠外边距消失&quot; /&gt;   &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/BFC概念与实际应用场景/bfc-case-4.jpg&quot; alt=&quot;折叠外边距消失&quot; /&gt;   &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;line-blk&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 	&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 单独的一个BFC --&amp;gt;&lt;/span&gt;
@@ -192,8 +191,8 @@ A block formatting context is a part of a visual CSS rendering of a Web page. It
 
 </description>
         <pubDate>Thu, 09 Apr 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/04/09/BFC%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/04/09/BFC%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF.html</guid>
+        <link>http://kylar.cn/2015/04/09/BFC%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF.html</link>
+        <guid isPermaLink="true">http://kylar.cn/2015/04/09/BFC%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF.html</guid>
         
         <category>我的笔记</category>
         
@@ -203,7 +202,7 @@ A block formatting context is a part of a visual CSS rendering of a Web page. It
       <item>
         <title>iframe跨域参数传递方式</title>
         <description>&lt;p&gt;在和第三方公司进行合作的时候，经常会遇到需要进行跨域通信的情况，如下图所示，第三方公司需要获取我方的userid等信息，右下角的框内是一个我方的登录iframe窗口，在这里需要将登录后得结果发送给父页面。 &lt;br /&gt;
-&lt;img src=&quot;http://localhost:4000/assets/iframe跨域参数传递方式/case.jpg&quot; alt=&quot;情况&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://kylar.cn/assets/iframe跨域参数传递方式/case.jpg&quot; alt=&quot;情况&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;跨域参数传递方式&lt;/h2&gt;
 
@@ -261,12 +260,12 @@ A block formatting context is a part of a visual CSS rendering of a Web page. It
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/iframe跨域参数传递方式/demo.jpg&quot; alt=&quot;运行结果&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/iframe跨域参数传递方式/demo.jpg&quot; alt=&quot;运行结果&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 07 Apr 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/04/07/iframe%E8%B7%A8%E5%9F%9F%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%96%B9%E5%BC%8F.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/04/07/iframe%E8%B7%A8%E5%9F%9F%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%96%B9%E5%BC%8F.html</guid>
+        <link>http://kylar.cn/2015/04/07/iframe%E8%B7%A8%E5%9F%9F%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%96%B9%E5%BC%8F.html</link>
+        <guid isPermaLink="true">http://kylar.cn/2015/04/07/iframe%E8%B7%A8%E5%9F%9F%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%96%B9%E5%BC%8F.html</guid>
         
         <category>我的笔记</category>
         
@@ -319,8 +318,8 @@ A block formatting context is a part of a visual CSS rendering of a Web page. It
 
 </description>
         <pubDate>Thu, 02 Apr 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/04/02/Ns.css%E8%A7%86%E8%A7%89%E6%A0%B7%E5%BC%8F%E5%BA%93.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/04/02/Ns.css%E8%A7%86%E8%A7%89%E6%A0%B7%E5%BC%8F%E5%BA%93.html</guid>
+        <link>http://kylar.cn/2015/04/02/Ns.css%E8%A7%86%E8%A7%89%E6%A0%B7%E5%BC%8F%E5%BA%93.html</link>
+        <guid isPermaLink="true">http://kylar.cn/2015/04/02/Ns.css%E8%A7%86%E8%A7%89%E6%A0%B7%E5%BC%8F%E5%BA%93.html</guid>
         
         <category>我的作品</category>
         
@@ -332,7 +331,7 @@ A block formatting context is a part of a visual CSS rendering of a Web page. It
         <description>&lt;p&gt;项目地址 &lt;br /&gt;
 &lt;a href=&quot;https://github.com/devWayne/EasyUrl.js&quot;&gt;git repo&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/简化浏览器Url操作--EasyUrl/url.jpg&quot; alt=&quot;Url解析&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/简化浏览器Url操作--EasyUrl/url.jpg&quot; alt=&quot;Url解析&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;url&quot;&gt;Url成分&lt;/h2&gt;
 
@@ -425,8 +424,8 @@ Hash值是带在&lt;code&gt;#&lt;/code&gt;后得一个字符串，所以在操�
 
 </description>
         <pubDate>Fri, 27 Mar 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/03/27/%E7%AE%80%E5%8C%96%E6%B5%8F%E8%A7%88%E5%99%A8Url%E6%93%8D%E4%BD%9C--EasyUrl.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/03/27/%E7%AE%80%E5%8C%96%E6%B5%8F%E8%A7%88%E5%99%A8Url%E6%93%8D%E4%BD%9C--EasyUrl.html</guid>
+        <link>http://kylar.cn/2015/03/27/%E7%AE%80%E5%8C%96%E6%B5%8F%E8%A7%88%E5%99%A8Url%E6%93%8D%E4%BD%9C--EasyUrl.html</link>
+        <guid isPermaLink="true">http://kylar.cn/2015/03/27/%E7%AE%80%E5%8C%96%E6%B5%8F%E8%A7%88%E5%99%A8Url%E6%93%8D%E4%BD%9C--EasyUrl.html</guid>
         
         <category>我的作品</category>
         
@@ -438,8 +437,8 @@ Hash值是带在&lt;code&gt;#&lt;/code&gt;后得一个字符串，所以在操�
         <description>&lt;h2 id=&quot;section&quot;&gt;问题现象&lt;/h2&gt;
 &lt;p&gt;在ios（实测IOS8仍然存在该问题）中，如果某一DOM节点的postion定位为fixed，并且该节点中的某个子节点会唤起虚拟键盘的时候，Position:fixed的定位会被打破，造成下图中得效果：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/IOS-position-fixed/ios8-1.png&quot; alt=&quot;ios8-1&quot; /&gt;
-&lt;img src=&quot;http://localhost:4000/assets/IOS-position-fixed/ios8-2.png&quot; alt=&quot;ios8-2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/IOS-position-fixed/ios8-1.png&quot; alt=&quot;ios8-1&quot; /&gt;
+&lt;img src=&quot;http://kylar.cn/assets/IOS-position-fixed/ios8-2.png&quot; alt=&quot;ios8-2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;这一类的场景在社交功能类得App中可以说非常的常见，
 通过现象可以推测在输入框获得焦点的时候，footer的位置被居中了，并且可以进行滚动。
@@ -496,7 +495,7 @@ Hash值是带在&lt;code&gt;#&lt;/code&gt;后得一个字符串，所以在操�
 &lt;h2 id=&quot;bonus&quot;&gt;Bonus&lt;/h2&gt;
 &lt;p&gt;在实际的测试过程中，发现了一个更隐蔽的BUG，在IPHONE4环境下，点击Input获得输入框焦点的时候，会引发‘穿透’现象，即触发了positon:fixed元素下面一层的元素事件，如图所示：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/IOS-position-fixed/ip4-1.png&quot; alt=&quot;ip4-1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/IOS-position-fixed/ip4-1.png&quot; alt=&quot;ip4-1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;在这里会触发点击评论的事件，尝试使用&lt;code&gt;event.stopPropagation()&lt;/code&gt;去阻止事件冒泡并没有效果，根据之前对header &amp;amp; footer 定位的方案，所以考虑通过改变Body的定位，使整个页面定位为absolute。&lt;/p&gt;
 
@@ -519,8 +518,8 @@ Hash值是带在&lt;code&gt;#&lt;/code&gt;后得一个字符串，所以在操�
 
 </description>
         <pubDate>Mon, 09 Mar 2015 06:21:49 +0800</pubDate>
-        <link>http://localhost:4000/jekyll/update/2015/03/09/IOS-position-fixed.html</link>
-        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2015/03/09/IOS-position-fixed.html</guid>
+        <link>http://kylar.cn/jekyll/update/2015/03/09/IOS-position-fixed.html</link>
+        <guid isPermaLink="true">http://kylar.cn/jekyll/update/2015/03/09/IOS-position-fixed.html</guid>
         
         <category>我的笔记</category>
         
@@ -536,7 +535,7 @@ Hash值是带在&lt;code&gt;#&lt;/code&gt;后得一个字符串，所以在操�
         <description>&lt;p&gt;线上地址：&lt;a href=&quot;http://kylar.cn/ActiLib/&quot;&gt;运营组件库&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;https://github.com/devWayne/ActiLib&quot;&gt;git repo&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/运营组件库/actlib.jpg&quot; alt=&quot;网页截图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/运营组件库/actlib.jpg&quot; alt=&quot;网页截图&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;为什么要开发组件库？&lt;/h2&gt;
 
@@ -544,8 +543,8 @@ Hash值是带在&lt;code&gt;#&lt;/code&gt;后得一个字符串，所以在操�
 
 </description>
         <pubDate>Tue, 01 Apr 2014 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2014/04/01/%E8%BF%90%E8%90%A5%E7%BB%84%E4%BB%B6%E5%BA%93.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2014/04/01/%E8%BF%90%E8%90%A5%E7%BB%84%E4%BB%B6%E5%BA%93.html</guid>
+        <link>http://kylar.cn/2014/04/01/%E8%BF%90%E8%90%A5%E7%BB%84%E4%BB%B6%E5%BA%93.html</link>
+        <guid isPermaLink="true">http://kylar.cn/2014/04/01/%E8%BF%90%E8%90%A5%E7%BB%84%E4%BB%B6%E5%BA%93.html</guid>
         
         <category>我的作品</category>
         
@@ -570,7 +569,7 @@ Hash值是带在&lt;code&gt;#&lt;/code&gt;后得一个字符串，所以在操�
 &lt;p&gt;带“-”角标的表示需要带前缀使用如&lt;code&gt;-webkit-&lt;/code&gt;或&lt;code&gt;-ms-&lt;/code&gt;。 &lt;br /&gt;
 带“1”角标的表示支持&lt;code&gt;display:flexbox&lt;/code&gt;，但是不支持&lt;code&gt;display:flex&lt;/code&gt;。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/flexbox布局的版本区别和使用/caniuse.jpg&quot; alt=&quot;CanIUse&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/flexbox布局的版本区别和使用/caniuse.jpg&quot; alt=&quot;CanIUse&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;从图中可以看出，就移动端来说，使用&lt;code&gt;display:flexbox&lt;/code&gt;是一种最安全的方式,当然最全得写法是：   &lt;/p&gt;
 
@@ -606,15 +605,15 @@ Hash值是带在&lt;code&gt;#&lt;/code&gt;后得一个字符串，所以在操�
         &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;column sel&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;已过期&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/header&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/flexbox布局的版本区别和使用/demo1.jpg&quot; alt=&quot;实现效果&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/flexbox布局的版本区别和使用/demo1.jpg&quot; alt=&quot;实现效果&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;注意事项&lt;/h2&gt;
 
 &lt;p&gt;1.在使用&lt;code&gt;-webkit-box&lt;/code&gt;的时候，子元素的&lt;code&gt;display&lt;/code&gt;属性需要为&lt;code&gt;block&lt;/code&gt;，而使用&lt;code&gt;flex&lt;/code&gt;的时候，子元素属性没有限制。&lt;/p&gt;
 </description>
         <pubDate>Mon, 17 Mar 2014 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2014/03/17/flexbox%E5%B8%83%E5%B1%80%E7%9A%84%E7%89%88%E6%9C%AC%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2014/03/17/flexbox%E5%B8%83%E5%B1%80%E7%9A%84%E7%89%88%E6%9C%AC%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8.html</guid>
+        <link>http://kylar.cn/2014/03/17/flexbox%E5%B8%83%E5%B1%80%E7%9A%84%E7%89%88%E6%9C%AC%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8.html</link>
+        <guid isPermaLink="true">http://kylar.cn/2014/03/17/flexbox%E5%B8%83%E5%B1%80%E7%9A%84%E7%89%88%E6%9C%AC%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8.html</guid>
         
         <category>我的笔记</category>
         
@@ -642,30 +641,30 @@ Hash值是带在&lt;code&gt;#&lt;/code&gt;后得一个字符串，所以在操�
 
 &lt;p&gt;1/选择对应的模板类型，点击确认选择   &lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/自动化中间分享页生成服务/topic1.jpg&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/自动化中间分享页生成服务/topic1.jpg&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2.配置相应的选项,每一个模板对应一种配置选项   &lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/自动化中间分享页生成服务/topic2.jpg&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/自动化中间分享页生成服务/topic2.jpg&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;根据提示填写配置选项   &lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/自动化中间分享页生成服务/topic2-2.jpg&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/自动化中间分享页生成服务/topic2-2.jpg&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3.在浏览器上进行在线预览   &lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/自动化中间分享页生成服务/topic3.jpg&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/自动化中间分享页生成服务/topic3.jpg&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;4.将页面下载下来或者配置FTP直接上传   &lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/自动化中间分享页生成服务/topic4.jpg&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/自动化中间分享页生成服务/topic4.jpg&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/自动化中间分享页生成服务/topic4-2.jpg&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/自动化中间分享页生成服务/topic4-2.jpg&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 01 Feb 2014 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2014/02/01/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%AD%E9%97%B4%E5%88%86%E4%BA%AB%E9%A1%B5%E7%94%9F%E6%88%90%E6%9C%8D%E5%8A%A1.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2014/02/01/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%AD%E9%97%B4%E5%88%86%E4%BA%AB%E9%A1%B5%E7%94%9F%E6%88%90%E6%9C%8D%E5%8A%A1.html</guid>
+        <link>http://kylar.cn/2014/02/01/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%AD%E9%97%B4%E5%88%86%E4%BA%AB%E9%A1%B5%E7%94%9F%E6%88%90%E6%9C%8D%E5%8A%A1.html</link>
+        <guid isPermaLink="true">http://kylar.cn/2014/02/01/%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%AD%E9%97%B4%E5%88%86%E4%BA%AB%E9%A1%B5%E7%94%9F%E6%88%90%E6%9C%8D%E5%8A%A1.html</guid>
         
         <category>我的作品</category>
         
@@ -681,8 +680,8 @@ Hash值是带在&lt;code&gt;#&lt;/code&gt;后得一个字符串，所以在操�
 
 </description>
         <pubDate>Thu, 02 Jan 2014 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2014/01/02/Web-Compoents%E4%B8%AD%E6%96%87%E7%BD%91.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2014/01/02/Web-Compoents%E4%B8%AD%E6%96%87%E7%BD%91.html</guid>
+        <link>http://kylar.cn/2014/01/02/Web-Compoents%E4%B8%AD%E6%96%87%E7%BD%91.html</link>
+        <guid isPermaLink="true">http://kylar.cn/2014/01/02/Web-Compoents%E4%B8%AD%E6%96%87%E7%BD%91.html</guid>
         
         <category>我的作品</category>
         
