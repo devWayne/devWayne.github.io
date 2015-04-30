@@ -3,6 +3,46 @@
   
   
   <url>
+    <loc>http://kylar.cn/jekyll/update/2015/05/01/MinRequest-%E8%BD%BB%E9%87%8F%E5%8C%96jsonp%E8%B7%A8%E5%9F%9F%E5%AE%9E%E7%8E%B0.html</loc>
+    
+    <lastmod>2015-05-01T00:00:00+08:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://kylar.cn/2015/04/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E8%AF%95%E9%9D%A2%E6%9D%BF-MinPanel%20.html</loc>
+    
+    <lastmod>2015-04-30T00:00:00+08:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://kylar.cn/jekyll/update/2015/04/29/this%E4%B8%8E%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%A8%A1%E5%BC%8F.html</loc>
+    
+    <lastmod>2015-04-29T00:00:00+08:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://kylar.cn/2015/04/28/mBaseCli-%E5%8E%9F%E5%AD%90%E5%8C%96%E6%A8%A1%E5%9D%97%E4%BE%9D%E8%B5%96%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</loc>
+    
+    <lastmod>2015-04-28T00:00:00+08:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://kylar.cn/2015/04/15/%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html</loc>
+    
+    <lastmod>2015-04-15T00:00:00+08:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://kylar.cn/2015/04/10/WebApp%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF%E7%9A%84%E4%B8%80%E4%BA%9B%E5%88%86%E6%9E%90%E5%92%8C%E7%9C%8B%E6%B3%95.html</loc>
     
     <lastmod>2015-04-10T00:00:00+08:00</lastmod>
@@ -93,21 +133,21 @@
   
   <url>
     <loc>http://kylar.cn/404.html</loc>
-    <lastmod>2015-04-29T16:32:14+08:00</lastmod>
+    <lastmod>2015-04-30T18:43:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://kylar.cn/aboutme.html</loc>
-    <lastmod>2015-04-29T16:32:14+08:00</lastmod>
+    <lastmod>2015-04-30T18:43:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://kylar.cn/</loc>
-    <lastmod>2015-04-29T16:32:14+08:00</lastmod>
+    <lastmod>2015-04-30T18:43:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
