@@ -5,8 +5,8 @@
     <description></description>
     <link>http://kylar.cn/</link>
     <atom:link href="http://kylar.cn/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 May 2015 12:18:48 +0800</pubDate>
-    <lastBuildDate>Sun, 03 May 2015 12:18:48 +0800</lastBuildDate>
+    <pubDate>Sun, 03 May 2015 21:06:51 +0800</pubDate>
+    <lastBuildDate>Sun, 03 May 2015 21:06:51 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -415,19 +415,6 @@ Webview基于html5，开发上线不受版本限制，但是使用体验比起�
       </item>
     
       <item>
-        <title>HTML5离线缓存笔记</title>
-        <description>
-</description>
-        <pubDate>Sun, 01 Mar 2015 00:00:00 +0800</pubDate>
-        <link>http://kylar.cn/2015/03/01/HTML5%E7%A6%BB%E7%BA%BF%E7%BC%93%E5%AD%98%E7%AC%94%E8%AE%B0.html</link>
-        <guid isPermaLink="true">http://kylar.cn/2015/03/01/HTML5%E7%A6%BB%E7%BA%BF%E7%BC%93%E5%AD%98%E7%AC%94%E8%AE%B0.html</guid>
-        
-        <category>我的笔记</category>
-        
-        
-      </item>
-    
-      <item>
         <title>FTP环境发布流程和版本管理工具</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://github.com/devWayne/gulp-ftp-env.git&quot;&gt;git repo&lt;/a&gt;&lt;/p&gt;
 
@@ -764,6 +751,79 @@ A block formatting context is a part of a visual CSS rendering of a Web page. It
         <guid isPermaLink="true">http://kylar.cn/2015/01/19/BFC%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF.html</guid>
         
         <category>我的笔记</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>跨终端代理工具-HttpProxyServer</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/devWayne/hps&quot;&gt;项目GIT地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;线上文件代理&lt;/h2&gt;
+
+&lt;p&gt;在前端开发的过程中，经经常会碰到需要对生产环境的代码进行调试的场景，而一般生产环境中的静态资源都是经过压缩的，会给调试带来许多不便。   &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/跨终端代理工具-HttpProxyServer/min-js.jpg&quot; alt=&quot;网页截图&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在windows系统中有一个非常好用的代理工具Fidder，可以帮助我们使用本地源码文件替换线上生产环境的文件，但是由于是一款windows软件，在mac和Linux下无法使用。   &lt;/p&gt;
+
+&lt;p&gt;基于这种现状，利用nodejs的跨平台特性，开发了HttpProxyServer来实现文件代理的功能，其基本原理是利用nodejs的http模块创建了一个代理服务器，配合chrome的switchsharp将http请求转入代理服务器内。   &lt;/p&gt;
+
+&lt;p&gt;代理服务捕获所有的Http请求，根据HttpProxyServer的config文件来判断是否替换为本地文件。    &lt;/p&gt;
+
+&lt;p&gt;对于移动端开发来说，同样适用，不同的是通过连接代理wifi将请求转入代服务器内，下文会有详细介绍。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;使用方式&lt;/h2&gt;
+
+&lt;h4 id=&quot;hps&quot;&gt;全局安装hps&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm i -g hps&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;url&quot;&gt;找到需要代理文件的url&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/跨终端代理工具-HttpProxyServer/min-url.jpg&quot; alt=&quot;网页截图&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;switchysharp&quot;&gt;使用SwitchySharp进行浏览器代理&lt;/h4&gt;
+
+&lt;p&gt;SwitchySharp是一款chrome插件，也是目前市面上最受哦欢迎的浏览器代理工具。 &lt;br /&gt;
+通过配置可以将浏览器的请求全部转发到设定的端口上，在这里设为7000.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/跨终端代理工具-HttpProxyServer/switchsharp.jpg&quot; alt=&quot;网页截图&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;section-2&quot;&gt;编写配置文件&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;map&lt;/code&gt;变量是一个数组，里面存放需要代理的线上文件和本地文件路径，如：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://t2.s2.dpfile.com/t/jsnew/app/newhome/page/movie-list.min.8a5d9f0637b67d3a9aac1eb748d9443d.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/Users/wayne/code/dianping/tuangou-home-static/js/page/movie-list.js&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;这里的port对应的就是浏览器转发的端口。将该文件保存为&lt;code&gt;config.js&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;shell&quot;&gt;在Shell中运行指令&lt;/h4&gt;
+
+&lt;p&gt;第二个参数表示config文件的路径&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;hps start ./config.js&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;section-3&quot;&gt;刷新页面&lt;/h4&gt;
+
+&lt;p&gt;刷新页面后，可以看到控制台输出&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/跨终端代理工具-HttpProxyServer/shell.jpg&quot; alt=&quot;网页截图&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这时在浏览器中再次找到这个文件时，可以看到线上文件已经替换为本地文件了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/跨终端代理工具-HttpProxyServer/debug-js.jpg&quot; alt=&quot;网页截图&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 17 Jan 2015 00:00:00 +0800</pubDate>
+        <link>http://kylar.cn/2015/01/17/%E8%B7%A8%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7-HttpProxyServer.html</link>
+        <guid isPermaLink="true">http://kylar.cn/2015/01/17/%E8%B7%A8%E7%BB%88%E7%AB%AF%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7-HttpProxyServer.html</guid>
+        
+        <category>我的作品</category>
         
         
       </item>
