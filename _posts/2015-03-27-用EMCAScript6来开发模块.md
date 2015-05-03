@@ -18,8 +18,7 @@ ES6引入了Class的概念，虽然其本质还只是一个语法糖，但是对
 
 ![网页截图]({{ site.url }}/assets/用EMCAScript6来开发模块/class.jpg)
 
-
-
+这张图是否看起来很有java中类图的感觉呢?
 {% highlight javascript %}
 
 //父类

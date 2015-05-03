@@ -5,9 +5,9 @@ comments: true
 tags: notes
 ---
 
-#跨终端代理工具-HttpProxyServer
-
 [项目GIT地址](https://github.com/devWayne/hps)
+
+## 线上文件代理
 
 在前端开发的过程中，经经常会碰到需要对生产环境的代码进行调试的场景，而一般生产环境中的静态资源都是经过压缩的，会给调试带来许多不便。   
 
