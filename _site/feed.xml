@@ -5,8 +5,8 @@
     <description></description>
     <link>http://kylar.cn/</link>
     <atom:link href="http://kylar.cn/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 May 2015 21:06:51 +0800</pubDate>
-    <lastBuildDate>Sun, 03 May 2015 21:06:51 +0800</lastBuildDate>
+    <pubDate>Sun, 03 May 2015 22:10:41 +0800</pubDate>
+    <lastBuildDate>Sun, 03 May 2015 22:10:41 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -484,7 +484,7 @@ Webview基于html5，开发上线不受版本限制，但是使用体验比起�
 
 &lt;p&gt;为了进一步的提高运营活动的开发生态，随&lt;code&gt;gulp-ftp-env&lt;/code&gt;一起发布的还有模板工具和组件库等，希望能够通过这些工具来完成所有可复用的操作，最大化的提升开发效率。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://kylar.cn/FTP环境发布流程和版本管理工具/ftp-workflow.jpg&quot; alt=&quot;FTP-flow&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/FTP环境发布流程和版本管理工具/ftp-workflow.jpg&quot; alt=&quot;FTP-flow&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;相关目录：&lt;/p&gt;
 
