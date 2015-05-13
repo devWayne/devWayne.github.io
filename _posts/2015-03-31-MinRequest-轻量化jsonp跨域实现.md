@@ -19,9 +19,13 @@ tags: 我的作品 我的笔记
 
 2. postMessage API [参见本文](http://kylar.cn/2015/04/07/iframe%E8%B7%A8%E5%9F%9F%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%96%B9%E5%BC%8F.html)
 
-3. WebSocket
+3. FLASH
 
 4. 设置document.domain (只适用于一级域名相同，二级域名不同得情况下）
+
+5. window.name
+
+6. location.hash   
 
 在条件允许的情况下，jsonp是一种使用最广泛，在有库类得情况下，改动最小的方式。
 
