@@ -9,7 +9,7 @@ tags: 我的笔记 我的作品
 
 ## 关于如何使用ES6进行开发
 
-[参照本文:使用ES6+Babel+Broswerify进行开发](http://kylar.cn/使用ES6+Babel+Broswerify进行开发)
+[参照本文:使用ES6+Babel+Broswerify进行开发](http://kylar.cn/2015/02/02/%E4%BD%BF%E7%94%A8ES6+Babel+Broswerify%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%8F%91)
 
 ## ES6 Class
 ES6引入了Class的概念，虽然其本质还只是一个语法糖，但是对于JS模块的开发来说，终于可以像写java类一样来开发，可以说非常值得一式。
