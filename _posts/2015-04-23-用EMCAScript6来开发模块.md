@@ -12,16 +12,17 @@ tags: 我的笔记 我的作品
 [参照本文:使用ES6+Babel+Broswerify进行开发](http://kylar.cn/2015/02/02/%E4%BD%BF%E7%94%A8ES6+Babel+Broswerify%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%8F%91)
 
 ## ES6 Class
-ES6引入了Class的概念，虽然其本质还只是一个语法糖，但是对于JS模块的开发来说，终于可以像写java类一样来开发，可以说非常值得一式。
 
-来看以下一个场景：   
+在前端基础模块中，弹窗类的模块可以说是一种典型的代表。      
 
 ![网页截图]({{ site.url }}/assets/用EMCAScript6来开发模块/class.jpg)
 
-这张图是否看起来很有java中类图的感觉呢?
+利用ES6中Class的概念，可以方便的将底层方法进行抽象，就像Java开发中的类一样。
+
 {% highlight javascript %}
 
-//父类
+//父类或者抽象类
+
 export default class Popup {
 
 	//构造函数
@@ -46,6 +47,8 @@ export default class Popup {
 
 {% endhighlight %}
 
+每一种弹窗类模块都包涵了几种基础方法，包括：生成半透明浮层，点击浮层取消弹窗等，所以在父类中定义了`remove()`,`bindEvent(El)`和`createOL`三个基础方法。
+
 {% highlight javascript %}
 
 //子类
@@ -68,5 +71,5 @@ export default class Confirm extends Popup{
 }
 {% endhighlight %}
 
-
+子类根据实际的需要生成Element(EL),在构造函数中覆写this.EL，*注意：这里的构造方式中必须有super()*，同时增加自定义方法。
 	
