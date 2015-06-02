@@ -5,8 +5,8 @@
     <description></description>
     <link>http://kylar.cn/</link>
     <atom:link href="http://kylar.cn/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 27 May 2015 19:39:46 +0800</pubDate>
-    <lastBuildDate>Wed, 27 May 2015 19:39:46 +0800</lastBuildDate>
+    <pubDate>Mon, 01 Jun 2015 11:15:42 +0800</pubDate>
+    <lastBuildDate>Mon, 01 Jun 2015 11:15:42 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -396,6 +396,61 @@
       </item>
     
       <item>
+        <title>js中new关键字详解</title>
+        <description>&lt;p&gt;&lt;code&gt;new&lt;/code&gt;关键字一直是javascript中讨论的比较多的问题，一般来说认为&lt;code&gt;new&lt;/code&gt;在执行的时候做了以下5件事：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;创建一个新对象&lt;/li&gt;
+  &lt;li&gt;将新对象的&lt;code&gt;__proto__&lt;/code&gt;指向构造函数的&lt;code&gt;prototype&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;使用新对象作为上下文调用构造函数&lt;/li&gt;
+  &lt;li&gt;新对象的&lt;code&gt;constructor&lt;/code&gt;指向构造函数&lt;/li&gt;
+  &lt;li&gt;返回新对象&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;使用&lt;code&gt;new&lt;/code&gt;关键字来实例一个对象&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;func1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;//func1&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//obj.props1 = 1;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//obj.props2 = 2;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//obj.fun1 = function(){&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;//func1&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//console.log(&amp;#39;new Obj&amp;#39;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;不使用&lt;code&gt;new&lt;/code&gt;关键字来实例一个对象&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;func1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;//func1&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;constructor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;protype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;__proro__&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 15 Apr 2015 00:00:00 +0800</pubDate>
+        <link>http://kylar.cn/2015/04/15/js%E4%B8%ADnew%E5%85%B3%E9%94%AE%E5%AD%97%E8%AF%A6%E8%A7%A3.html</link>
+        <guid isPermaLink="true">http://kylar.cn/2015/04/15/js%E4%B8%ADnew%E5%85%B3%E9%94%AE%E5%AD%97%E8%AF%A6%E8%A7%A3.html</guid>
+        
+        <category>我的笔记</category>
+        
+        
+      </item>
+    
+      <item>
         <title>移动端调试面板-MinPanel</title>
         <description>&lt;h2 id=&quot;section&quot;&gt;移动端开发和调试&lt;/h2&gt;
 
@@ -736,164 +791,12 @@ Webview基于html5，开发上线不受版本限制，但是使用体验比起�
       </item>
     
       <item>
-        <title>FTP环境发布流程和版本管理工具</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/devWayne/gulp-ftp-env.git&quot;&gt;git repo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;ftp&quot;&gt;FTP环境开发现状&lt;/h2&gt;
-
-&lt;p&gt;用FTP做服务器开发一些运营活动时，由于没有CI这类的集成化工具进行自动部署和发布，在上线和更新的时候，操作起来十分的繁琐，需要打开第三方FTP工具，如&lt;code&gt;FileZilla&lt;/code&gt;等，配置地址，然后手动拖拽将文件转入FTP。在更新的时候又需要重复此操作将文件覆盖。    &lt;/p&gt;
-
-&lt;p&gt;这种做法虽然方便，但是存在以下一些问题：
-1. 线上文件没有版本，如果需要引入，必须手动新建文件夹。
-2. 测试环境变量(51ping.com)与线上(dianping.com)不同，容易将测试地址或其他变量误引到线上
-2. 发布流程不规范，手动拖拽文件容易出错&lt;/p&gt;
-
-&lt;h2 id=&quot;gulp-ftp-env&quot;&gt;Gulp-ftp-env&lt;/h2&gt;
-
-&lt;p&gt;Gulp-ftp-env是一个&lt;code&gt;gulp&lt;/code&gt;插件，目的为了解决基于FTP开发的静态应用时遇到的一系列问题。
-主要功能包括：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;将ftp信息提前配置，实现一键发布。   &lt;/li&gt;
-  &lt;li&gt;对线上的静态资源实现自动化的版本控制。   &lt;/li&gt;
-  &lt;li&gt;测试环境变量提前进行配置，在线上环境自动替换。   &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;使用方式，添加2个&lt;code&gt;Gulp Task&lt;/code&gt;:   &lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ftpEnv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gulp-ftp-env&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   
-
-&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;beta&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;   
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dist&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/**&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   
-          &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ftpEnv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; 
-	    &lt;span class=&quot;c1&quot;&gt;//配置基本FTP信息  &lt;/span&gt;
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;host&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;xxx.xxx.xxx.xxx&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;port&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;21&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;user&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;pass&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;remotePath&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;foo/&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;version&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;   
-        &lt;span class=&quot;p&quot;&gt;}));&lt;/span&gt;    
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;   
-
-&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;product&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;   
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dirs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dist&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/**&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   
-          &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ftpEnv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;   
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;host&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;xxx.xxx.xxx.xx&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;port&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;21&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;user&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;pass&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;remotePath&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;foo/&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  
-	    &lt;span class=&quot;c1&quot;&gt;//设置版本占位符 &lt;/span&gt;
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;version&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-	    &lt;span class=&quot;c1&quot;&gt;//关键字数组，发布时自动替换  &lt;/span&gt;
-            &lt;span class=&quot;s2&quot;&gt;&amp;quot;keywords&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;before&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;51ping.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;after&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;dianping.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}]&lt;/span&gt;   
-        &lt;span class=&quot;p&quot;&gt;}));&lt;/span&gt;   
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 在&amp;#39;gulp product&amp;#39;时，app.js会传入&amp;#39;myact&amp;#39;中得一个子文件夹内，每次上线就会额外生成一个子文件夹 --&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://evt.51ping.com/movie/myact/app.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 下面script脚本中的&amp;#39;51ping.com&amp;#39;，在执行&amp;#39;gulp product&amp;#39;的时候会被替换成&amp;#39;dianping.com&amp;#39; --&amp;gt;&lt;/span&gt;
- &lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-		&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;http://evt.51ping.com/xxx&amp;#39;&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;//....&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;ftp-1&quot;&gt;FTP开发生态&lt;/h2&gt;
-
-&lt;p&gt;为了进一步的提高运营活动的开发生态，随&lt;code&gt;gulp-ftp-env&lt;/code&gt;一起发布的还有模板工具和组件库等，希望能够通过这些工具来完成所有可复用的操作，最大化的提升开发效率。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/FTP环境发布流程和版本管理工具/ftp-workflow.jpg&quot; alt=&quot;FTP-flow&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;相关目录：&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/devWayne/gulp-ftp-env.git&quot;&gt;运营组件库ActiLib&lt;/a&gt; &lt;br /&gt;
-&lt;a href=&quot;https://github.com/devWayne/web-starter-template&quot;&gt;WEB APP template&lt;/a&gt; &lt;br /&gt;
-&lt;a href=&quot;https://github.com/devWayne/webstarter&quot;&gt;Generator Tool&lt;/a&gt;&lt;/p&gt;
+        <title>各种height/width整理</title>
+        <description>&lt;iframe id=&quot;cp_embed_bNPOoz&quot; src=&quot;//codepen.io/superlin/embed/bNPOoz?height=601&amp;amp;theme-id=13793&amp;amp;slug-hash=bNPOoz&amp;amp;default-tab=result&amp;amp;user=superlin&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; height=&quot;601&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; class=&quot;cp_embed_iframe undefined&quot; style=&quot;width: 100%; overflow: hidden;&quot;&gt;&lt;/iframe&gt;
 </description>
-        <pubDate>Fri, 13 Feb 2015 00:00:00 +0800</pubDate>
-        <link>http://kylar.cn/2015/02/13/FTP%E7%8E%AF%E5%A2%83%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B%E5%92%8C%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7.html</link>
-        <guid isPermaLink="true">http://kylar.cn/2015/02/13/FTP%E7%8E%AF%E5%A2%83%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B%E5%92%8C%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7.html</guid>
-        
-        <category>我的作品</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>WebApp发展趋势的一些分析和看法</title>
-        <description>&lt;h2 id=&quot;webapp&quot;&gt;当下最火热的WebApp开发框架&lt;/h2&gt;
-
-&lt;p&gt;自2013年5月Facebook React开源以来，下一代Web前端的框架就呈现三足鼎立的状态&lt;/p&gt;
-
-&lt;h4 id=&quot;angularjs&quot;&gt;Angular.js&lt;/h4&gt;
-
-&lt;p&gt;Auglar作为MVVM框架的代表之作，同类的还有Vue.js,Avalon.js等等。MVVM框架的优势利用&lt;code&gt;ViewModel&lt;/code&gt;在实现数据模型和试图的双向绑定，不用人工去操作DOM,但是DOM操作的速度比较慢。&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;相关实例:&lt;a href=&quot;https://github.com/devWayne/sk-ng&quot;&gt;Angular-一元秒杀运营场景&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;reactjs&quot;&gt;React.js&lt;/h4&gt;
-
-&lt;p&gt;React准确的定位是一个UI层的框架，由于Angular出名更早，很多人喜欢拿他们在比较，其实并没有什么意义。   &lt;/p&gt;
-
-&lt;p&gt;目前移动端Web的体验不如原生的原因就在于DOM的渲染速度缓慢，容易让人感觉卡顿，而React是一个渲染性能极佳的UI层框架，在页面重绘的过程中会计算出差异最小的DOM改动方式，极大的提高了用户体验。&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;相关实例:&lt;a href=&quot;http://kylar.cn/mBase-doc/reactcomponent/&quot;&gt;React-Component&lt;/a&gt;&lt;/em&gt;   &lt;/p&gt;
-
-&lt;h4 id=&quot;polymerweb-components&quot;&gt;Polymer(Web components)&lt;/h4&gt;
-
-&lt;p&gt;Polymer需要较高得浏览器支持来实现Web components标准，是未来为发展方向，&lt;code&gt;Web-component&lt;/code&gt;草案虽然已经制定，但是要能够平滑的在主流的浏览器上支持还有很长的路要走，包括&lt;code&gt;Polymer&lt;/code&gt;本身每次的版本升级都会在核心机制上进行大量的改动，所以目前的时代还不属于他。  &lt;/p&gt;
-
-&lt;p&gt;如果对以上框架进行横向对比的话，不难看出整个前端框架发展的大方向：&lt;/p&gt;
-
-&lt;p&gt;1.更清晰的分层（模板代码分离）   &lt;/p&gt;
-
-&lt;p&gt;2.更少的DOM操作（数据与视图绑定）   &lt;/p&gt;
-
-&lt;p&gt;3.更深层的组件化   &lt;/p&gt;
-
-&lt;p&gt;4.对现代浏览器标准更好的支持(ES6)      &lt;/p&gt;
-
-&lt;h2 id=&quot;webappmobile&quot;&gt;WebApp在Mobile端的性能瓶颈&amp;amp;解决方案&lt;/h2&gt;
-
-&lt;p&gt;Web app的性能瓶颈，主要有以下原因:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;DOM操作缓慢，在文档结构复杂的情况下，DOM生成和修改需要花费大量的时间。&lt;/li&gt;
-  &lt;li&gt;单线程渲染。对于UI的操作，单线程无疑是最安全的一种方式，但是单线程在16ms内要完成布局，渲染等一系列操作十分困难。（有望在未来通过Web Worker缓解）&lt;/li&gt;
-  &lt;li&gt;无法利用GPU对图片等渲染进行硬件加速。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;1.Flipboard Canvas&lt;/p&gt;
-
-&lt;p&gt;Flipboard 希望渲染时间降至16ms以内&lt;code&gt;浏览器重绘网页的频率是60FPS（即16毫秒/帧），JavaScript做不到在16毫秒内完成DOM操作，因此产生了跳帧。&lt;/code&gt;在执行动画效果的时候将DOM操作减少到最低，虽然可以使用CSS transform and opacity，但是毕竟可选择的余地还是太少了。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/WebApp发展趋势的一些分析和看法/filpboard_btn.gif&quot; alt=&quot;效果&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;最后开发团队受到了HTML5游戏的启发，将整个页面搬到了Canvas上面，没有任何的DOM结构，一下子突破了DOM的性能瓶颈，Canvas操作的方式不仅仅是绕开了DOM，并且可以进行硬件（GPU）加速&lt;/p&gt;
-
-&lt;p&gt;当然关于这种做法质疑的声音也很多，很多人认为这是一种投机取巧的做法，虽然替换了DOM，但是本身却是虚拟的，HTML标签，CSS等现有的标准都被摒弃后重新制作。但是无论如何，作为一种新的移动端Web突破性能的方式，是值得去探索的。   &lt;/p&gt;
-
-&lt;p&gt;相关代码和文章： &lt;br /&gt;
-&lt;a href=&quot;https://github.com/Flipboard/react-canvas&quot;&gt;react-canvas&lt;/a&gt;
-&lt;a href=&quot;http://engineering.flipboard.com/2015/02/mobile-web&quot;&gt;移动端每秒60帧！&lt;/a&gt;  &lt;/p&gt;
-
-&lt;p&gt;2.Facebook React Native&lt;/p&gt;
-
-&lt;p&gt;在React.js 2015大会上，Facebook公布了React Native，基于开源框架React.js，并可用来开发iOS和Android原生应用。
-React Native在产品上其实已经超出了WebApp得定义，但是追溯其开发方式，暂且将其归为WebApp突破性能的一种解决方案。   &lt;/p&gt;
-
-&lt;p&gt;不同于Ionic,PhoneGap等基于webview的Hybird方式,React Native通过将Virtual DOM过不同的渲染引擎生成不同平台下的UI，JS和Native之间通过Bridge通信。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://kylar.cn/assets/WebApp发展趋势的一些分析和看法/react-native1.jpg&quot; alt=&quot;react native 1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;React Native大大降低开发Native App的门槛与学习成本，也许会对传统的开发模式带来巨大得冲级。&lt;/p&gt;
-</description>
-        <pubDate>Tue, 10 Feb 2015 00:00:00 +0800</pubDate>
-        <link>http://kylar.cn/2015/02/10/WebApp%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF%E7%9A%84%E4%B8%80%E4%BA%9B%E5%88%86%E6%9E%90%E5%92%8C%E7%9C%8B%E6%B3%95.html</link>
-        <guid isPermaLink="true">http://kylar.cn/2015/02/10/WebApp%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF%E7%9A%84%E4%B8%80%E4%BA%9B%E5%88%86%E6%9E%90%E5%92%8C%E7%9C%8B%E6%B3%95.html</guid>
+        <pubDate>Sun, 01 Mar 2015 00:00:00 +0800</pubDate>
+        <link>http://kylar.cn/2015/03/01/%E5%90%84%E7%A7%8Dheight:width%E6%95%B4%E7%90%86.html</link>
+        <guid isPermaLink="true">http://kylar.cn/2015/03/01/%E5%90%84%E7%A7%8Dheight:width%E6%95%B4%E7%90%86.html</guid>
         
         <category>我的笔记</category>
         
